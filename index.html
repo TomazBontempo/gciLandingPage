@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Icon Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Guia do consumidor inteligente</title>
+
+    <!--Meta Tag-->
+    <meta
+      name="facebook-domain-verification"
+      content="wgy80wxddo2z7baj0k9if2hx87shvk"
+    />
+
+    <!-- Meta Pixel Code -->
+    <!-- <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "526496882741292");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=526496882741292&ev=PageView&noscript=1"
+    /></noscript> -->
+    <!-- End Meta Pixel Code -->
+  </head>
+
+  <body class="py-2">
+    <!--Frame-->
+    <div class="container frame">
+      <div class="container box px-5">
+        <!--Title-->
+        <div class="container my-auto text-center">
+          <img
+            class="title mt-4"
+            src="./images/GCI title.png"
+            alt="Titulo GCI"
+          />
+        </div>
+
+        <!--Grid-->
+        <div class="row">
+          <!--Container1-->
+          <div class="col-md-8 my-auto text-center container1">
+            <div class="box2">
+              <p class="chamada text-center">
+                Você <span>CONITNUA PAGANDO</span> pra sua
+                <span>INTERNET FICAR CAINDO</span> toda hora?<br />
+              </p>
+              <script src="index.js"></script>
+              <p class="command oi text-center">
+                <span>ENTÃO DA SÓ UMA OLHADA NESSE GUIA!</span>
+              </p>
+            </div>
+          </div>
+          <!--Container2-->
+          <div class="col-md-4 my-auto pb-5 container2">
+            <img
+              class="img-fluid text-center mt-4"
+              src="./images/Logo.png"
+              alt="Logo GCI"
+            />
+          </div>
+          <div class="w-100"></div>
+          <!--Container3-->
+          <div class="col-md-8 mb-5 text-center container3">
+            <p class="valor text-center">
+              Nosso guia tem essas e outras respostas</br> Tudo pela bagatela de
+              <span>R$50,00</span>
+            </p>
+            <a
+              href="https://pay.hotmart.com/Q80361170S?bid=1679003476640"
+              type="button"
+              class="btn btn-outline-warning btnAction m-4"
+              target="_blank"
+            >
+              Comprar
+            </a>
+            <a
+              href="https://app-vlc.hotmart.com/affiliate-recruiting/view/0900G80361191"
+              type="button"
+              class="btn btn-outline-warning btnAction m-4"
+              target="_blank"
+            >
+              Afiliar-se
+            </a>
+          </div>
+          <!--Container4-->
+          <div class="col-md-4 container4">
+            <p class="bonus">
+              Informe seu e-mail abaixo e receba <span>GRÁTIS</span> o passo a
+              passo para abrir reclamação na <span>ANATEL</span> e solucionar de
+              vez os problemas de internet.
+            </p>
+
+            <div class="container d-flex justify-content-center">
+              <form
+                id="form"
+                method="post"
+                action="https://mail.guiadoconsumidorinteligente.com/mails"
+              >
+                <div class="form__group field">
+                  <input
+                    type="email"
+                    class="form__field"
+                    placeholder="E-mail"
+                    name="email"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label">E-mail</label>
+                </div>
+                <div class="text-center">
+                  <button
+                    id="cadastroBtn"
+                    type="submit"
+                    class="btn btn-outline-warning btnSend m-4"
+                  >
+                    Receber o passo a passo
+                  </button>
+                  <script>
+                    const form = document.getElementById("form");
+                    form.addEventListener("submit", (e) => {
+                      e.preventDefault();
+                      form.submit();
+                      alert("Prabéns, seu passo a passo foi enviado. :D");
+                      form.reset();
+                    });
+                  </script>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- Bootstrap Script -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
+</html>
