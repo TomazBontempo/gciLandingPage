@@ -62,15 +62,6 @@ body {
   margin-right: 4%;
 }
 
-.container4 p {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 26px;
-}
-
-.container4 p span {
-  color: #ffd058;
-}
-
 .btnAction {
   border: 1px solid #146ab7;
   width: 30%;
@@ -78,6 +69,15 @@ body {
 .btnAction:hover {
   background-color: #146ab7;
   color: #ffffff;
+}
+
+.container4 p {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 26px;
+}
+
+.container4 p span {
+  color: #ffd058;
 }
 
 /* Form*/
@@ -135,8 +135,86 @@ body {
   font-weight: 700;
 }
 
-/* reset input */
-.form__field:required,
-.form__field:invalid {
-  box-shadow: none;
+/* Responsivity*/
+@media (max-width: 767px) {
+  .frame {
+    border-radius: 0%;
+  }
+
+  .container1 {
+    padding-top: 10px;
+    font-size: 16px;
+  }
+
+  .img {
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .valor {
+    font-size: 16px;
+  }
+
+  .btnAction {
+    border: 1px solid #146ab7;
+    width: 35%;
+  }
+  .btnAction:hover {
+    background-color: #146ab7;
+    color: #ffffff;
+  }
+
+  .container4 p {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #ffffff;
+    outline: 0;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .form__field::placeholder {
+    color: transparent;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 16px;
+    cursor: text;
+    top: 20px;
+  }
+
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-color: #146ab7;
+    border-image-slice: 1;
+  }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 16px;
+    color: #146ab7;
+    font-weight: 700;
+  }
 }
