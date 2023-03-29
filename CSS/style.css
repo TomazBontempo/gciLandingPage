@@ -5,6 +5,7 @@
 
 body {
   background-image: url(../images/lpBackground.png);
+  background-color: #00012d;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -65,10 +66,6 @@ body {
 .btnAction {
   border: 1px solid #146ab7;
   width: 30%;
-}
-.btnAction:hover {
-  background-color: #146ab7;
-  color: #ffffff;
 }
 
 .container4 p {
@@ -174,10 +171,6 @@ body {
   .btnAction {
     border: 1px solid #146ab7;
     width: 35%;
-  }
-  .btnAction:hover {
-    background-color: #146ab7;
-    color: #ffffff;
   }
 
   .container4 p {
