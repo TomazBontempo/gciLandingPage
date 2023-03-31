@@ -7,7 +7,7 @@ function animarTexto() {
     "Sabe quais <span>OUTROS ÓRGÃOS</span> podem te <span>DEFENDER</span> de praticas abusivas?",
     "Tem ideia do que fazer se <span>DESISTIR</span> de uma <span>COMPRA POR IMPULSO</span> online?",
     "Conhece as <span>MELHORES FERRAMENTAS</span> para conseguir <span>DESCONTOS</span>?",
-    "Você <span>CONITNUA PAGANDO</span> pra sua <span>INTERNET FICAR CAINDO</span> toda hora?",
+    "Você <span>CONITINUA PAGANDO</span> pra sua <span>INTERNET FICAR CAINDO</span> toda hora?",
   ];
 
   // Índice do texto atual na lista de textos
