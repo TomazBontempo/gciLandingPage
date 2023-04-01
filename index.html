@@ -27,7 +27,7 @@
     />
 
     <!-- Meta Pixel Code -->
-    <script>
+    <!-- <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
@@ -60,7 +60,7 @@
         width="1"
         style="display: none"
         src="https://www.facebook.com/tr?id=526496882741292&ev=PageView&noscript=1"
-    /></noscript>
+    /></noscript> -->
     <!-- End Meta Pixel Code -->
   </head>
 
@@ -137,7 +137,7 @@
               <form
                 id="form"
                 method="post"
-                action="https://mail.guiadoconsumidorinteligente.com/mails"
+                action="http://localhost:3000/mails"
               >
                 <div class="form__group field">
                   <input
@@ -159,13 +159,38 @@
                     Receber o passo a passo
                   </button>
                   <script>
-                    const form = document.getElementById("form");
-                    form.addEventListener("submit", (e) => {
-                      e.preventDefault();
-                      form.submit();
-                      alert("Parabéns, seu passo a passo foi enviado. :D\nLembra-se de olha seu spam!");
-                      form.reset();
-                    });
+                      const form = document.getElementById("form");
+
+                      const handleSubmitAsync = () => {
+                        const formData = new FormData(form);
+                        const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
+
+                        return fetch(form.action, {
+                          method: form.method,
+                          headers: {
+                            "Content-Type": "application/json"
+                          },
+                          body: jsonData
+                        })
+                        .then(response => {
+                          if (response.ok) {
+                            return response;
+                          } else {
+                            throw new Error('Form submission failed');
+                          }
+                        });
+                      }
+
+                      form.addEventListener("submit", async (e) => {
+                        e.preventDefault();
+                        try {
+                          await handleSubmitAsync();
+                          alert("Parabéns, seu passo a passo foi enviado. :D\nLembra-se de olhar seu spam!");
+                          form.reset();
+                        } catch (error) {
+                          console.error('Form submission error:', error);
+                        }
+                      });
                   </script>
                 </div>
               </form>
