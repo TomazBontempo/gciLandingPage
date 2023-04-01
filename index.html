@@ -27,7 +27,7 @@
     />
 
     <!-- Meta Pixel Code -->
-    <!-- <script>
+    <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
@@ -60,7 +60,7 @@
         width="1"
         style="display: none"
         src="https://www.facebook.com/tr?id=526496882741292&ev=PageView&noscript=1"
-    /></noscript> -->
+    /></noscript>
     <!-- End Meta Pixel Code -->
   </head>
 
@@ -137,7 +137,7 @@
               <form
                 id="form"
                 method="post"
-                action="http://localhost:3000/mails"
+                action="https://mail.guiadoconsumidorinteligente.com/mails"
               >
                 <div class="form__group field">
                   <input
@@ -185,7 +185,7 @@
                         e.preventDefault();
                         try {
                           await handleSubmitAsync();
-                          alert("Parabéns, seu passo a passo foi enviado. :D\nLembra-se de olhar seu spam!");
+                          alert("Parabéns, seu passo a passo foi enviado. :D\nLembre-se de olhar seu spam!");
                           form.reset();
                         } catch (error) {
                           console.error('Form submission error:', error);
