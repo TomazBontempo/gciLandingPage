@@ -160,37 +160,12 @@
                   </button>
                   <script>
                       const form = document.getElementById("form");
-
-                      const handleSubmitAsync = () => {
-                        const formData = new FormData(form);
-                        const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
-
-                        return fetch(form.action, {
-                          method: form.method,
-                          headers: {
-                            "Content-Type": "application/json"
-                          },
-                          body: jsonData
-                        })
-                        .then(response => {
-                          if (response.ok) {
-                            return response;
-                          } else {
-                            throw new Error('Form submission failed');
-                          }
-                        });
-                      }
-
-                      form.addEventListener("submit", async (e) => {
-                        e.preventDefault();
-                        try {
-                          await handleSubmitAsync();
-                          alert("Parabéns, seu passo a passo foi enviado. :D\nLembra-se de olhar seu spam!");
-                          form.reset();
-                        } catch (error) {
-                          console.error('Form submission error:', error);
+                      form.addEventListener("submit", sub);
+                      function sub(){
+                          form.submit();
+                          setTimeout(function(){form.reset();}, 50);
+                          setTimeout(function(){window.alert("ParabÃ©ns, seu passo a passo foi enviado. :D\nLembra-se de olhar seu spam!");}, 50);   
                         }
-                      });
                   </script>
                 </div>
               </form>
