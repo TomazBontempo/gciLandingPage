@@ -19,49 +19,6 @@
     <!-- Icon Favicon -->
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <title>Guia do consumidor inteligente</title>
-
-    <!--Meta Tag-->
-    <meta
-      name="facebook-domain-verification"
-      content="wgy80wxddo2z7baj0k9if2hx87shvk"
-    />
-
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "526496882741292");
-      fbq("track", "PageView");
-    </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=526496882741292&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
   </head>
 
   <body class="py-2">
@@ -103,10 +60,10 @@
           </div>
           <div class="w-100"></div>
           <!--Container3-->
-          <div class="col-md-8 mb-3 text-center container3">
+          <div class="col-md-12 mb-3 text-center container3">
             <p class="valor text-center">
               Nosso guia tem essas e outras respostas</br> Tudo pela bagatela de
-              <span>R$9,87</span>
+              <span>9,87</span> mangos!
             </p>
             <a
               href="https://pay.hotmart.com/Q80361170S?bid=1679003476640"
@@ -116,77 +73,6 @@
             >
               Comprar
             </a>
-          </div>
-          <!--Container4-->
-          <div class="col-md-4 container4">
-            <p class="bonus">
-              Informe seu e-mail abaixo e receba <span>GRÁTIS</span> o passo a
-              passo para abrir reclamação na <span>ANATEL</span> e solucionar de
-              vez os problemas de internet.
-            </p>
-
-            <div class="container d-flex justify-content-center">
-              <form
-                id="form"
-                method="post"
-                action="https://mail.guiadoconsumidorinteligente.com/mails"
-              >
-                <div class="form__group field">
-                  <input
-                    type="email"
-                    class="form__field"
-                    placeholder="E-mail"
-                    name="email"
-                    id="email"
-                    required
-                  />
-                  <label for="email" class="form__label">E-mail</label>
-                </div>
-                <div class="text-center">
-                  <button
-                    id="cadastroBtn"
-                    type="submit"
-                    class="btn btn-outline-warning btnSend m-4"
-                  >
-                    Receber o passo a passo
-                  </button>
-                  <script>
-                      const form = document.getElementById("form");
-
-                      const handleSubmitAsync = () => {
-                        const formData = new FormData(form);
-                        const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
-
-                        return fetch(form.action, {
-                          method: form.method,
-                          headers: {
-                            "Content-Type": "application/json"
-                          },
-                          body: jsonData
-                        })
-                        .then(response => {
-                          if (response.ok) {
-                            return response;
-                          } else {
-                            throw new Error('Form submission failed');
-                          }
-                        });
-                      }
-
-                      form.addEventListener("submit", async (e) => {
-                        e.preventDefault();
-                        try {
-                          await handleSubmitAsync();
-                          alert("Parabéns, seu passo a passo foi enviado. :D\nLembre-se de olhar seu spam!");
-                          form.reset();
-                        } catch (error) {
-                          console.error('Form submission error:', error);
-                        }
-                      });
-                  </script>
-                </div>
-              </form>
-            </div>
           </div>
         </div>
       </div>
